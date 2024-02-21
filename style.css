@@ -1,3 +1,32 @@
 body {
-    font-size: 15pt;
+    font-size: 4rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px
+}
+.tasti {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.tasti-div {
+  display: flex;
+  column-gap: 5px;
+}
+.tasti-div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  max-width: 160px;
+  background-color: red;
+}
+.tasto-zero {
+  padding-left: 42.5px;
+  padding-right: 42.5px;
 }
