@@ -1,6 +1,7 @@
 body {
     font-size: 4rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #C5CACF
 }
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -22,6 +23,7 @@ section {
 }
 .risultato {
   display: inline-block;
+  user-select: none;
 }
 .tasti {
   display: flex;
@@ -29,8 +31,9 @@ section {
   flex-direction: column;
     background-color: #005C69;
   border-radius: 50px;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25)
-  
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding-bottom: 60px;
 }
 .tasti-div {
   display: flex;
@@ -42,21 +45,26 @@ section {
   width: 85px;
   height: 80px;
   max-width: 160px;
-  color: #D3F3EE;
+  color: #d3f3ee;
   cursor: pointer;
   user-select: none;
   transition: color 0.15s, background-color 0.15s;
-  border: 0.1px solid #7FB7BE;
+  border: 0.1px solid #7fb7be;
   border-radius: 15px;
-  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.15)
+  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.15);
+  
 }
 .tasti-div div:hover {
   color: #005c69;
-  background-color: #D3F3EE;
+  background-color: #d3f3ee;
 }
 .tasti-div div:active {
-  background-color: #93B7BE;
-  color: #F1FFFA;
+  background-color: #93b7be;
+  color: #f1fffa;
+}
+.tasti-div div span:active {
+  position: absolute;
+  animation: move 0.5s ease;
 }
 
 .tasto-zero {
@@ -65,4 +73,33 @@ section {
 }
 .material-symbols-outlined {
   font-size: 4rem;
+  
 }
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+.change-colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 30px;
+  padding-bottom: 5px;
+}
+.colors {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  margin-left: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
